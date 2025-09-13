@@ -68,6 +68,19 @@ app.post("/requests", (req, res) => {
   });
 });
 
+// Add this route to handle the root path
+app.get("/", (req, res) => {
+  res.json({
+    message: "Asset Management API is running!",
+    endpoints: {
+      users: "/users",
+      assets: "/assets",
+      requests: "/requests"
+    },
+    status: "OK"
+  });
+});
+
 // GET: Fetch all users
 app.get("/users", (req, res) => {
   const data = readData();
