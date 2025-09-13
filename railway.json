@@ -1,4 +1,4 @@
-echo '{
+{
   "build": {
     "builder": "nixpacks"
   },
@@ -7,4 +7,4 @@ echo '{
     "restartPolicyType": "ON_FAILURE",
     "restartPolicyMaxRetries": 10
   }
-}' > railway.json
+}
